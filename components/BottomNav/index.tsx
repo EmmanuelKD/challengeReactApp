@@ -64,6 +64,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 // Font Awesome Icons...
 import { FontAwesome5 } from '@expo/vector-icons'
 import { useRef } from 'react';
+import { COLORS } from '../../constants/Theme';
 
 const Tab = createBottomTabNavigator();
 
@@ -303,6 +304,7 @@ function SearchScreen() {
 
 const styles = StyleSheet.create({
   icon:{
+    transform: [{ rotate: "-30deg" }],
 
   },
   container: {

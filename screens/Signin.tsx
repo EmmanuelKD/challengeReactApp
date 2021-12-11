@@ -21,55 +21,56 @@ import SignupBtn from "../components/signupButton";
 import { NavigationContainer } from "@react-navigation/native";
 const { width, height } = Dimensions.get("screen");
 
-class Signin extends React.Component {
-  init = async () => {};
 
-  componentDidMount() {}
+function Signin({ navigation }: { navigation: any }) {
 
-  render() {
-    return (
-      // <NavigationContainer>
-      <SafeAreaView>
-        <ScrollView
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={styles.main}
+  return (
+    // <NavigationContainer>
+    <SafeAreaView>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.main}
+      >
+        <View
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            flexWrap: "nowrap",
+            // borderWidth: 2,
+            // borderColor: "red",
+          }}
         >
-          <View
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              flexWrap: "nowrap",
-              // borderWidth: 2,
-              // borderColor: "red",
-            }}
-          >
-            <LoginBG />
+          <LoginBG />
 
-            <CustomTextField
-              style={{ marginTop: 10 }}
-              onChange={() => {}}
-              title="Email"
-              keyboardType="email-address"
-            />
-            <CustomTextField
-              onChange={() => {}}
-              title="Password"
-              keyboardType="visible-password"
-              secureTextEntry={true}
-            />
-            <LoadingButton
-              style={{ marginTop: 20 }}
-              title="Signin"
-              onClick={() => {}}
-            />
-            <SignupBtn title="Signup" onClick={() => {}} />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-      // </NavigationContainer>
-    );
-  }
+          <CustomTextField
+            style={{ marginTop: 10 }}
+            onChange={() => { }}
+            title="Email"
+            keyboardType="email-address"
+          />
+          <CustomTextField
+            onChange={() => { }}
+            title="Password"
+            keyboardType="visible-password"
+            secureTextEntry={true}
+          />
+          <LoadingButton
+            style={{ marginTop: 20 }}
+            title="Signin"
+            onClick={() => {
+
+            }}
+          />
+          <SignupBtn title="Signup" onClick={() => {
+            navigation.navigate("SignUp")
+          }} />
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+    // </NavigationContainer>
+  );
+
 }
 
 const styles = StyleSheet.create({

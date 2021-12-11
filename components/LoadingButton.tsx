@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     position: "relative",
   },
-  titleText: { color: "#fff", fontSize: 20 },
+  titleText: { color: "#fff", fontSize: 17 },
   progress: {
     // width: 50,
     // height: 50,

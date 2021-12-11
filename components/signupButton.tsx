@@ -49,6 +49,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
    },
-  titleText: { color: COLORS.PRI, fontSize: 20 },
+  titleText: { color: COLORS.PRI, fontSize: 17 },
   titleContaier: {},
 });

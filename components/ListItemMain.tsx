@@ -8,9 +8,9 @@ import TransactionList from "./TransactionListItem";
 export default function ListItemMain() {
   return (
     <SafeAreaView>
-      <View>
+      <View style={styles.main}>
         <View>
-          <Text style={{ fontSize: 20 }}>Transactions</Text>
+          <Text style={{ fontSize: 20,margin:2 ,fontWeight:"bold" }}>Transactions</Text>
         </View>
         <View style={styles.container}>
           <ScrollView>
@@ -18,7 +18,7 @@ export default function ListItemMain() {
               return (
                 <TransactionList
                   key={ind}
-                  onClick={() => {}}
+                  onClick={() => { }}
                   amount="le1000"
                   id="0090394"
                   status={TransactionStatus.unknown}
@@ -39,11 +39,22 @@ const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 const styles = StyleSheet.create({
+
+  main: {
+    // paddingVertical: 3,
+  },
   container: {
-    width: windowWidth,
-    height: windowHeight * 0.6,
-    padding: 9,
-    margin: 9,
-    backgroundColor: applyAlpha("#000000", 0.16),
+    width: "100%",
+    height: windowHeight * 0.55,
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 3
+    },
+    shadowRadius: 5,
+    shadowOpacity: 1.0,
+    // 
+    // margin: 9,
+    // backgroundColor: applyAlpha("#000000", 0.16),
   },
 });

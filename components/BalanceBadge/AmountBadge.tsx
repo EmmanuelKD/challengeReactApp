@@ -27,13 +27,17 @@ export default function AmountBadge(props: AmountBadgeProps) {
 
 const styles = StyleSheet.create({
   main: {
-    // flex: 1,
-    // padding: 100,
+    position:"relative",
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center",
+    paddingVertical:10, 
   },
   text: {
     color: "#fffF",
     fontSize: 32,
     fontWeight: "bold",
+
     // fontFamily: "Roborto",
   },
   internalContainer: {

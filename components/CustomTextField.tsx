@@ -20,7 +20,7 @@ export default function CustomTextField(props: CustomTextFieldProps) {
   return (
     <SafeAreaView style={{...style}}>
       <View style={styles.main}>
-        <Text style={{ color: COLORS.PRI, fontSize: 17 }}>{title}</Text>
+        <Text style={{ color: COLORS.PRI, fontSize: 12 }}>{title}</Text>
         <TextInput
           style={styles.edittext}
           onChangeText={onChangeText}
@@ -37,7 +37,7 @@ export default function CustomTextField(props: CustomTextFieldProps) {
 const styles = StyleSheet.create({
   main: {
     width: 365,
-    height: 91,
+    height: 81,
     color: COLORS.PRI,
     margin: 12,
     padding: 10,
